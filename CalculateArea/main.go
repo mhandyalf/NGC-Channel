@@ -65,11 +65,11 @@ func main() {
 	for i := 0; i < len(input); i++ {
 		select {
 		case rectangle := <-rectangleChannel:
-			fmt.Printf("Rectangle (Length: %d) - Area: %f\n", rectangle.Length, rectangle.Area)
+			fmt.Printf("Rectangle (Length: %d) - Area: %.2f\n", rectangle.Length, rectangle.Area)
 		case circle := <-circleChannel:
-			fmt.Printf("Circle (Radius: %d) - Area: %f\n", circle.Length, circle.Area)
+			fmt.Printf("Circle (Radius: %d) - Area: %.2f\n", circle.Length, circle.Area)
 		case triangle := <-triangleChannel:
-			fmt.Printf("Tringale (Base: %d) - Area: %f\n", triangle.Length, triangle.Area)
+			fmt.Printf("Triangle (Base: %d) - Area: %.2f\n", triangle.Length, triangle.Area)
 		}
 	}
 }
